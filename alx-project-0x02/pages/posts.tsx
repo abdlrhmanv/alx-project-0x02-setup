@@ -13,7 +13,7 @@ const Posts = ({ posts }: PostsPageProps) => {
             <Header />
             
             {posts.map((post) => (
-                <PostCard key={post.userId} title={post.title} content={post.content} userId={post.userId} />
+                <PostCard key={post.id} title={post.title} content={post.content} userId={post.userId} />
             ))}
         </div>
     )
@@ -32,6 +32,7 @@ export async function getStaticProps() {
         return {
             props: {
                 posts: posts.map((post: any) => ({
+                    id: post.id,
                     title: post.title,
                     content: post.body,
                     userId: post.userId
