@@ -15,3 +15,13 @@ export interface PostModalProps {
     content: string;
     image: string;
   }
+
+export interface ButtonProps {
+    label: string;
+    onClick: () => void;
+    size?: 'small' | 'medium' | 'large';
+    shape?: 'rounded-sm' | 'rounded-md' | 'rounded-full';
+    variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+    disabled?: boolean;
+    className?: string;
+}
