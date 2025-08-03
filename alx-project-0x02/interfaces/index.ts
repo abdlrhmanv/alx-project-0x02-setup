@@ -25,3 +25,9 @@ export interface ButtonProps {
     disabled?: boolean;
     className?: string;
 }
+
+export interface PostProps {
+    title: string;
+    content: string;
+    userId: number;
+}
