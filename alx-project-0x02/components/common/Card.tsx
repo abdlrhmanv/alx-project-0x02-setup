@@ -1,11 +1,11 @@
 import React from 'react'
-import { CardProps } from '@/interfaces'
+import { type CardProps } from '@/interfaces'
 
-const Card = ({ title, description, image }: CardProps) => {
+const Card = ({ title, content, image }: CardProps) => {
   return (
     <div>
       <h2>{title}</h2>
-      <p>{description}</p>
+      <p>{content}</p>
       <img src={image} alt={title} />
     </div>
   )
